@@ -13,7 +13,179 @@
         .sidebar-block,
         .catListPostCategory,
         .catListPostArchive {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.3rem;
         }
+    }
+    .catListTitle {
+        font-size: 0.16rem;
+        font-weight: 500;
+        height: 0.3rem;
+    }
+}
+
+.newsItem {
+    #profile_block {
+        line-height: 1.8;
+        font-size: 0.12rem;
+        border-left: 2px solid @color_black;
+        transition: all .3s ease;
+        padding: 0.1rem;
+        a {
+            margin-left: 0.1rem;
+            color: @color_black;
+            text-decoration: none;
+            transition: all .3s ease;
+            &:hover {
+                color: @color_blue;
+                text-decoration: underline;
+            }
+        }
+        &:hover {
+            border-color: @color_blue;
+        }
+    }
+}
+
+#calendar {
+    padding: 0 0.1rem 0.1rem;
+    transition: all .3s ease;
+    box-shadow: 0 0 5px @color_gray;
+    .CalTitle {
+        font-size: 0.14rem;
+        border-bottom: 1px dashed @color_gray;
+        font-weight: 500;
+        .CalNextPrev {
+            color: @color_black;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            a {
+                display: inline-block;
+                color: @color_black;
+                text-decoration: none;
+                background: transparent;
+                transition: all .3s ease;
+                &:hover {
+                    color: @color_blue;
+                }
+            }
+        }
+    }
+    .CalDayHeader {
+        height: 0.3rem;
+        line-height: 0rem;
+    }
+    td {
+        height: 0.2rem;
+        line-height: 0.2rem;
+        text-decoration: none;
+        a {
+            display: block;
+            height: 0;
+            width: 80%;
+            padding-bottom: 80%;
+            background: @color_gray;
+            text-decoration: none;
+            &:hover {
+                background: @color_dark_blue;
+            }
+        }
+        &.CalTodayDay {
+            color: @color_white;
+            width: 23px;
+            background: @color_blue;
+            cursor: pointer;
+            a {
+                background: transparent;
+            }
+            &:hover {
+                background: @color_dark_blue;
+            }
+        }
+        u {
+            color: @color_white;
+            text-decoration: none;
+        }
+    }
+}
+
+#sidebar_search {
+    position: relative;
+    #widget_my_zzk {
+        border: 1px solid @color_gray;
+        box-sizing: border-box;
+        width: 100%;
+        height: 30px;
+        position: relative;
+        overflow: hidden;
+        .input_my_zzk {
+            outline: none;
+            position: absolute;
+            width: initial;
+            height: 100%;
+            border: none;
+            width: 140px;
+            margin-left: 10px;
+        }
+        .btn_my_zzk {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            outline: none;
+            border: none;
+            width: 60px;
+            background: @color_black;
+            color: @color_gray;
+            transition: all .3s ease;
+            &:hover {
+                color: @color_white;
+            }
+        }
+    }
+}
+
+#sidebar_toptags,
+#sidebar_categories {
+    overflow: hidden;
+    clear: both;
+    ul,
+    li {
+        list-style: none;
+    }
+    li {
+        display: block;
+        float: left;
+        color: @color_black;
+        width: 50%;
+        overflow: hidden;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        transition: all .3s ease;
+        font-size: 0.14rem;
+        &:hover {
+            color: @color_dark_blue;
+        }
+        a {
+            color: @color_black;
+            text-decoration: none;
+            transition: all .3s ease;
+            &:hover {
+                color: @color_dark_blue;
+            }
+        }
+    }
+}
+
+#sidebar_toptags {
+    .catListTag {
+        border-bottom: 2px dashed @color_gray;
+    }
+}
+
+#sidebar_categories {
+    margin-bottom: 0.3rem;
+    .catListTitle {
+        border-bottom: 2px dashed @color_gray;
     }
 }

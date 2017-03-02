@@ -2,9 +2,92 @@
 #mainContent {
     float: left;
     width: 7rem;
-    .forFlow {
-        .day {
-            margin-bottom: 0.3rem;
+}
+
+.day {
+    background: @color_white;
+    border: 2px solid @color_white;
+    border-top: none;
+    box-shadow: 0 0 5px @color_gray;
+    margin-bottom: 0.3rem;
+    padding: 0.1rem 0.2rem;
+    transition: all .3s ease;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    .dayTitle {
+        display: none;
+    }
+    .postTitle {
+        font-size: 0.16rem;
+        font-weight: 600;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        margin-bottom: 0.1rem;
+        text-align: left;
+        border-bottom: 2px dashed @color_gray;
+        border-left: 5px solid @color_black;
+        padding-left: 0.1rem;
+        transition: all .3s ease;
+        a {
+            color: @color_black;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .postCon {
+        min-height: 0.8rem;
+        font-size: 0.12rem;
+        padding-bottom: 0.2rem;
+        padding: 0.1rem;
+        .c_b_p_desc {
+            line-height: 2;
+        }
+        .c_b_p_desc_readmore {
+            display: none;
+            position: absolute;
+            bottom: 0.1rem;
+            right: 0.1rem;
+            text-decoration: none;
+            background: @color_blue;
+            padding: 0rem 0.2rem;
+            color: @color_white;
+            margin-left: 0.1rem;
+            transition: all .3s ease;
+            &:hover {
+                background: @color_dark_blue;
+            }
+        }
+    }
+    .postDesc {
+        text-align: left;
+        color: @color_gray;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        a {
+            margin-left: 0.1rem;
+            text-decoration: none;
+            color: @color_gray;
+            transition: all .3s ease;
+            &:hover {
+                color: @color_blue;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0 0 5px @color_black;
+        border-bottom-color: @color_blue;
+        .postTitle {
+            border-left-color: @color_dark_blue;
+            a {
+                transition: all .3s ease;
+                color: @color_blue;
+            }
+        }
+        .c_b_p_desc_readmore {
+            display: block;
         }
     }
 }
