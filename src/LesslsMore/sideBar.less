@@ -75,23 +75,28 @@
         line-height: 0rem;
     }
     td {
-        height: 0.2rem;
-        line-height: 0.2rem;
+        height:25px;
+        line-height: 25px;
         text-decoration: none;
         a {
             display: block;
-            height: 0;
-            width: 80%;
-            padding-bottom: 80%;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
             background: @color_gray;
             text-decoration: none;
+            u {
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
             &:hover {
                 background: @color_dark_blue;
             }
         }
         &.CalTodayDay {
             color: @color_white;
-            width: 23px;
+            width: 25px;
             background: @color_blue;
             cursor: pointer;
             a {

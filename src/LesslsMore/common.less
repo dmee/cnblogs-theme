@@ -19,6 +19,16 @@ body {
     background-color: #FFFDFA;
 }
 
+a {
+    color: @color_blue;
+    text-decoration: none;
+    transition: all .3s ease;
+    &:hover {
+        text-decoration: underline;
+        color: @color_dark_blue;
+    }
+}
+
 #home {
     width: 100%;
 }

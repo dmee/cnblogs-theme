@@ -1,7 +1,7 @@
 @import url('./color.conf');
 #mainContent {
     float: left;
-    width: 7rem;
+    width: 7.5rem;
 }
 
 .day {
@@ -14,7 +14,6 @@
     transition: all .3s ease;
     overflow: hidden;
     position: relative;
-    border-radius: 5px;
     .dayTitle {
         display: none;
     }
@@ -26,7 +25,7 @@
         margin-bottom: 0.1rem;
         text-align: left;
         border-bottom: 2px dashed @color_gray;
-        border-left: 5px solid @color_black;
+        border-left: 4px solid @color_gray;
         padding-left: 0.1rem;
         transition: all .3s ease;
         a {
@@ -38,26 +37,19 @@
         }
     }
     .postCon {
-        min-height: 0.8rem;
+        min-height: 0.5rem;
         font-size: 0.12rem;
-        padding-bottom: 0.2rem;
+        padding-bottom: 0.3rem;
         padding: 0.1rem;
         .c_b_p_desc {
             line-height: 2;
         }
         .c_b_p_desc_readmore {
-            display: none;
-            position: absolute;
-            bottom: 0.1rem;
-            right: 0.1rem;
-            text-decoration: none;
-            background: @color_blue;
-            padding: 0rem 0.2rem;
-            color: @color_white;
-            margin-left: 0.1rem;
+            display: inline-block;
+            color: @color_gray;
             transition: all .3s ease;
             &:hover {
-                background: @color_dark_blue;
+                color: @color_dark_blue;
             }
         }
     }
@@ -67,27 +59,34 @@
         height: 0.3rem;
         line-height: 0.3rem;
         a {
-            margin-left: 0.1rem;
+            float: right;
+            display: block;
+            padding: 0 0.1rem;
             text-decoration: none;
             color: @color_gray;
             transition: all .3s ease;
-            &:hover {
-                color: @color_blue;
-            }
         }
     }
+    .postSeparator {
+        margin-bottom: 0.3rem;
+    }
     &:hover {
-        box-shadow: 0 0 5px @color_black;
-        border-bottom-color: @color_blue;
+        border-bottom-color: @color_dark_blue;
         .postTitle {
             border-left-color: @color_dark_blue;
             a {
                 transition: all .3s ease;
-                color: @color_blue;
+                color: @color_dark_blue;
             }
         }
-        .c_b_p_desc_readmore {
-            display: block;
+        .postDesc {
+            a {
+                background: @color_blue;
+                color: @color_white;
+                &:hover {
+                    background: @color_dark_blue;
+                }
+            }
         }
     }
 }

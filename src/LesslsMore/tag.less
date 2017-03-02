@@ -1,0 +1,32 @@
+@import url('./color.conf');
+#myposts {
+    margin-left: 0;
+}
+
+.PostList {
+    border: 2px dashed @color_gray;
+    border-left: 4px solid @color_gray;
+    padding: 0.05rem 0.1rem;
+    margin-bottom: 0.2rem;
+    &:hover {
+        border-color: @color_blue;
+        .postTitl2 {
+            a {
+                color: @color_blue;
+                &:hover {
+                    color: @color_dark_blue;
+                }
+            }
+        }
+    }
+    .postTitl2 {
+        margin-bottom: 0.1rem;
+        a {
+            font-size: 0.2rem;
+            color: @color_black;
+        }
+    }
+    .postDesc2 {
+        color: @color_gray;
+    }
+}
