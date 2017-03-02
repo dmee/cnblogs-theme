@@ -1,0 +1,68 @@
+/**
+ * 模板名称：LesslsMore
+ */
+
+@import url('./color.conf');
+#header {
+    min-width: 1200px;
+    margin: 0 auto;
+    background: @color_black;
+    clear: both;
+    overflow: hidden;
+    #blogTitle,
+    #navigator {
+        height: 0.5rem;
+        line-height: 0.5rem;
+        display: inline-block;
+    }
+    .blogStats {
+        display: none;
+    }
+}
+
+#blogTitle {
+    float: left;
+    a {
+        display:block;
+        text-decoration: none;
+        color: @color_blue;
+        transition: all .3s ease;
+        &:hover {
+            animation: dese .75s linear;
+        }
+    }
+    .title {
+        font-size: 0.24rem;
+        font-weight: 500;
+        padding: 0 0.2rem;
+    }
+    .subtitle {
+        display: none;
+    }
+}
+
+#navigator {
+    float: right;
+}
+
+#navList {
+    li {
+        float: left;
+        list-style: none;
+        &:first-child {
+            display: none;
+        }
+    }
+    a {
+        display: block;
+        font-size: 0.14rem;
+        padding: 0 0.2rem;
+        text-decoration: none;
+        color: @color_gray;
+        transition: all .3s ease;
+        &:hover {
+            color: @color_blue;
+            transform: scale(1.2);
+        }
+    }
+}

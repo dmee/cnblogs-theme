@@ -21,12 +21,13 @@ var autoprefix = new LessPluginAutoPrefix({
 
 gulp.task('dev-less', function(done) {
     //所有通用样式
-    gulp.src('src/**/*.less')
+    gulp.src('src/LesslsMore/*.less')
         .pipe(plugins.less({
             plugins: [autoprefix]
         }))
+        .pipe(plugins.concat('theme.min.css'))
         .pipe(plugins.minifyCss())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/LesslsMore'))
         .on('end', done);
 });
 
@@ -34,7 +35,6 @@ gulp.task('dev-less', function(done) {
 gulp.task('dev-watch', function() {
     gulp.watch('src/**/*', ['dev-less']);
 });
-
 //清空编译文件目录
 gulp.task('cls', function(done) {
     gulp.src('dist')
