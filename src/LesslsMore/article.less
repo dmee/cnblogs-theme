@@ -63,15 +63,26 @@
     }
     strong,
     h4 {
-        margin: 0.1rem 0.15rem;
         font-weight: 700;
         font-size: 0.14rem;
         color: #444
+    }
+    h4 {
+        margin: 0.1rem 0.15rem;
     }
     p {
         margin: 0.1rem 0.15rem 0.2rem;
         font-size: 0.14rem;
         font-family: Microsoft Yahei, Tahoma, Arial, SimSun, Hiragino Sans GB, PMingLiu, Verdana, sans-serif;
+        img {
+            box-shadow: 0 0 5px @color_black;
+            margin: 0.2rem 0;
+            overflow: hidden;
+            border-radius: 3px;
+            &:hover {
+                box-shadow: 0 0 5px @color_dark_blue;
+            }
+        }
     }
     .sourceCode {
         margin: 0 0.05rem 0.3rem;
@@ -84,7 +95,7 @@
         color: #ddd;
         p {
             margin: 0.25rem 0 0.1rem;
-            &:first-child{
+            &:first-child {
                 margin-top: 0.1rem;
             }
         }
@@ -106,6 +117,9 @@
             color: @color_blue;
             text-decoration: underline;
         }
+    }
+    img {
+        max-width:6.9rem;
     }
 }
 
